@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 100px;
+            height: 100px;
+            background: grey;
+            font-size: 80px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        td:hover {
+            background: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td onclick="marcar(this)"></td>
+            <td onclick="marcar(this)"></td>
+            <td onclick="marcar(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="marcar(this)"></td>
+            <td onclick="marcar(this)"></td>
+            <td onclick="marcar(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="marcar(this)"></td>
+            <td onclick="marcar(this)"></td>
+            <td onclick="marcar(this)"></td>
+        </tr>
+    </table>
+    <script>
+
+        let jogador = "X"
+
+        function marcar(campo) {
+            campo.innerHTML = jogador
+            if (jogador == "X") {
+                jogador = "O"
+            } else {
+                jogador = "X"
+            }
+        }
+    </script>
+</body>
+</html>
